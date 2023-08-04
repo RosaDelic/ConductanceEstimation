@@ -161,24 +161,8 @@ Next, we describe all functions contained in the package.
     dx: vector with the equations of the dynamical system describing the neuronal activity
 
 
-(3.2) Results:
-
-- description:
-
-    Function to obtain the matrices of v(t) amplitude, A(gE,gI), and period, T(gE,gI), used to estimate the conductances gE, gI. It uses the Stellate Model but it can be changed for any other model by using a different model function.
-    
-- output:
-
-    A:nxm matrix containing the v(t) amplitude corresponding to the (gE,gI) pair 
-
-    T:nxm matrix containing the v(t) period corresponding to the (gE,gI) pair
-
-    gE:1xm vector containing discretized values of excitatory conductance gE used to compute A and T
-
-    gI:1xm vector containing discretized values of inhibitory conductance gI used to compute A and T
-
   
-(3.3) Example:
+(3.2) Example:
 
 - description: 
  
