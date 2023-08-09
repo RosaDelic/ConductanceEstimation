@@ -19,23 +19,49 @@ Next, we describe all functions contained in the package.
 
 - input:
   
-  A=nxm matrix containing the v(t) amplitude corresponding to the (gE,gI) pair
+  A:nxm matrix containing the v(t) amplitude corresponding to the (gE,gI) pair
   
-  T=nxm matrix containing the v(t) period corresponding to the (gE,gI) pair
+  T:nxm matrix containing the v(t) period corresponding to the (gE,gI) pair
   
-  gE=1xm vector containing discretized values of excitatory conductance gE
+  gE:1xm vector containing discretized values of excitatory conductance gE
    
-  gI=1xn vector containing discretized values of inhibitory conductance gI
+  gI:1xn vector containing discretized values of inhibitory conductance gI
   
-  V=1xp vector of the membrane potential from which we want to estimate gE and gI
+  V:1xp vector of the membrane potential from which we want to estimate gE and gI
   
-  t=1xp vector corresponding to the time vector of V
+  t:1xp vector corresponding to the time vector of V
   
 - output:
   
   EstimatedgE:1xp vector of the estimated gE conductance obtained
   
   EstimatedgI:1xp vector of the estimated gI conductance obtained
+
+(1.2) TablesCreator(model,d)
+
+- description:
+
+  Routine to extract the relations between the amplitude and period with the conductances. That is, tables A(gE,gI), T(gE,gI)
+
+- input:
+  
+  model:base model function
+  
+  d:discretization used to define the vectors of conductances gE,gI
+
+- output:
+  
+  A:nxm matrix containing the v(t) amplitude corresponding to the (gE,gI) pair
+  
+  T:nxm matrix containing the v(t) period corresponding to the (gE,gI) pair
+  
+  gE:1xm vector containing discretized values of excitatory conductance gE
+
+  gI:1xn vector containing discretized values of inhibitory conductance gI
+
+  *The routine also returns a .mat file, named "Results.mat", that contains gE, gI, A and T
+
+
 
 
 (2) AUXILIAR FUNCTIONS:
